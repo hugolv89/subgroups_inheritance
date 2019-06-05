@@ -96,7 +96,7 @@ function group_inheritance_create_group_event($event, $type, $object) {
 			$user_guids = array($user_guids);
 		}
 		
-		if (!empty($user_guids) && $object && $object->subgroups_inheritance_enable == 'yes') {
+		if (!empty($user_guids) && $object && ($object->subgroups_inheritance_enable != 'yes' || !Functions::SETTING_BOOL('enable_inheritance')) ) {
 				
 			// Loop
 			$subgroups = Inheritance::subgroups_inheritance($object);
@@ -141,7 +141,7 @@ function group_inheritance_move_group($hook, $entity_type, $returnvalue, $params
 	$parentgroup = get_entity($parent_guid);
 	elgg_set_ignore_access($ia);
 	
-	if($parentgroup && $group && $group->subgroups_inheritance_enable == 'yes'){
+	if($parentgroup && $group && ($group->subgroups_inheritance_enable != 'yes' || !Functions::SETTING_BOOL('enable_inheritance')) ){
 		
 		// Parent Users
 		$user_guids = $parentgroup->getMembers();

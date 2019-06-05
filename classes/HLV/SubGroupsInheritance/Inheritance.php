@@ -26,7 +26,7 @@ class Inheritance {
 				
 				foreach ($subgroups as $subgroup) {
 				
-					if($subgroup->subgroups_inheritance_enable != 'no' || !Functions::SETTING_BOOL('enable_inheritance')  ){ // Has inheritance enable || Default All
+					if($subgroup->subgroups_inheritance_enable != 'yes' || !Functions::SETTING_BOOL('enable_inheritance')){ // Has inheritance enable || Default All
 						
 						if( $is_group =  Inheritance::subgroups_inheritance($subgroup,$actual) ){
 		
