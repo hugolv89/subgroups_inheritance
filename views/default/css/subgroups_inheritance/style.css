@@ -1,0 +1,36 @@
+/*
+* Subgroups Hierarchy CSS
+*/
+
+#maingroup_hierarchy {
+	
+	padding-left:0px;
+}
+
+#maingroup_hierarchy ul {
+
+  list-style-type: none;
+  margin-left:-15;
+  padding-left:20px;
+  text-indent: -4px;
+}
+
+/* UL Layer 1 Rules */
+#maingroup_hierarchy {
+  font-size: 18px;
+  font-weight:bold;
+}
+
+#maingroup_hierarchy img{
+  margin-right:8px;
+  vertical-align: text-top;
+}
+
+#maingroup_hierarchy div.hierarchydata{
+	margin: 0 0 1px 0;
+	height:25px;
+}
+
+#actualgroup {
+	text-decoration: underline;
+}

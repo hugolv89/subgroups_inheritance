@@ -3,6 +3,7 @@ INTRODUCTION
 
 Member inheritance of subgroups according permitted access
 
+
 DEPENDENCIES
 -------------------
 
